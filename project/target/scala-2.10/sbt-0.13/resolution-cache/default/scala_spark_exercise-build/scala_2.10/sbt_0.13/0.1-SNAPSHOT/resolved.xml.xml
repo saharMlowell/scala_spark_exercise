@@ -4,7 +4,7 @@
 		module="scala_spark_exercise-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170829171650"
+		publication="20170830143623"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
