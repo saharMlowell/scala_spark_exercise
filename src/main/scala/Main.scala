@@ -1,4 +1,8 @@
-object Main {
-  // let's do a bare minimum, working example
-  def main(args: Array[String]): Unit = println("hello world!")
+package exercise
+
+import org.apache.spark.sql.SparkSession
+
+object Exercise extends App{
+  println("Hello World!")
+  val spark = SparkSession.builder.appName("scala_spark_exercise").getOrCreate
 }
