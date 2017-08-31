@@ -3,11 +3,11 @@ package exercise
 import org.apache.spark.sql.SparkSession
 
 object Exercise extends App{
-  println("Hello World!")
   val spark = SparkSession.builder().master("local").appName("scala_spark_exercise").getOrCreate
+
+  import spark.implicits._ // This import is needed to use the $-notation
+
   val df = spark.read.json("src/main/resources/people.json")
-  df.select("name").show()
-  df.filter($"age" > 21).show()
-  // Displays the content of the DataFrame to stdout
-  df.show()
+  df.filter($"age" > 21).select("name").show() // Select name of people older than 21
+
 }
